@@ -15,7 +15,18 @@ namespace ByteBankImportacaoExportacao
         {
             //CriarArquivo();
             //CriarArquivoComWriter();
-            TestaEscrita();
+            //TestaEscrita();
+
+            //using (var fs = new FileStream("testaTipos.txt", FileMode.Create))
+            //using (var escritor = new StreamWriter(fs))
+            //{
+            //    escritor.WriteLine(true); //saem como texto puro
+            //    escritor.WriteLine(false); //saem como texto puro
+            //    escritor.WriteLine(543543453); //saem como texto puro
+            //}
+
+            //EscritaBinaria();
+            LeituraBinaria();
 
             Console.ReadLine();
         }
