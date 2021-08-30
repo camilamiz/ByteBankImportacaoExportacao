@@ -26,9 +26,30 @@ namespace ByteBankImportacaoExportacao
             //}
 
             //EscritaBinaria();
-            LeituraBinaria();
+            //LeituraBinaria();
+
+            var linhas = File.ReadAllLines("contas.txt");
+            Console.WriteLine(linhas.Length);
+
+            foreach (var linha in linhas)
+            {
+                //vamos usar isso somente para casos de arquivo pequenos, pois o arquivo é lido de uma vez
+                Console.WriteLine(linha);
+            }
+
+            var bytesArquivo = File.ReadAllBytes("contas.txt");
+            Console.WriteLine($"Arquivo contas.txt possui {bytesArquivo.Length} bytes");
+
+            File.WriteAllText("escrevendoComAClasseFile.txt", "Testando File.WriteAllText");
+            Console.WriteLine("Arquivo escrevendoComAClasseFile criado!");
 
             Console.ReadLine();
+
+            //Console.WriteLine("Digite o seu nome: ");
+            //var nome = Console.ReadLine();
+            //Console.WriteLine(nome);
+
+            //Console.ReadLine();
         }
     }
 }
